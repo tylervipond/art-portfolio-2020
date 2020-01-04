@@ -10,8 +10,10 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - {label: "Path", name: "path", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Year", name: "year", widget: "string"}
       - {label: "Size", name: "size", widget: "string"}
       - {label: "Media", name: "media", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
+      - {label: "Order", name: "order", widget: "number"}
