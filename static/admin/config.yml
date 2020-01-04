@@ -3,6 +3,13 @@ backend:
   branch: master
 
 media_folder: 'images/uploads'
+media_library:
+  name: uploadcare
+  config:
+    publicKey: 09634082642e628ffd99
+  settings:
+    autoFilename: true
+    defaultOperations: '/resize/2048x/-/resize/1024x/-/resize/768x/-/resize/384x/-/quality/smart/'
 collections:
   - name: 'sculptures'
     label: 'Sculptures'
