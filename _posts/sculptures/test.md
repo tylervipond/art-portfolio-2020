@@ -1,5 +1,5 @@
 ---
-path: test
+path: /test
 title: test
 year: '2019'
 size: 10 x 10
