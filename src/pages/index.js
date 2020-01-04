@@ -5,11 +5,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { PageTitle } from '../components/page-title/page-title'
 
-const IndexPage = ({
-  data: {
-    allMarkdownRemark: { edges },
-  },
-}) => (
+const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <PageTitle>Works</PageTitle>
