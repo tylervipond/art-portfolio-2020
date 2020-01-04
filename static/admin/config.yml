@@ -2,18 +2,23 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: "images/uploads"
+media_folder: 'images/uploads'
 collections:
-  - name: "sculptures"
-    label: "Sculptures"
-    folder: "_posts/sculptures"
+  - name: 'sculptures'
+    label: 'Sculptures'
+    folder: '_posts/sculptures'
     create: true
-    slug: "{{slug}}"
+    slug: '{{slug}}'
     fields:
-      - {label: "Path", name: "path", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Year", name: "year", widget: "string"}
-      - {label: "Size", name: "size", widget: "string"}
-      - {label: "Media", name: "media", widget: "string"}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Order", name: "order", widget: "number"}
+      - { label: 'Path', name: 'path', widget: 'string' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Year', name: 'year', widget: 'string' }
+      - { label: 'Size', name: 'size', widget: 'string' }
+      - { label: 'Media', name: 'media', widget: 'string' }
+      - {
+          label: 'Image',
+          name: 'image',
+          widget: 'image',
+          media_library: { config: { multiple: true } },
+        }
+      - { label: 'Order', name: 'order', widget: 'number', default: 0 }
