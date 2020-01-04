@@ -7,7 +7,7 @@ import { COLOR_TEXT } from '../../styles/colors';
 export const ArtworkTitle = styled.p`
   font-size: ${FONT_SIZE_2};
   font-family: ${TYPE_FACE_COPY};
-  font-weight: 'bold';
+  font-weight: bold;
   color: ${COLOR_TEXT};
   margin: 0;
 `
