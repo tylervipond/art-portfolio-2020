@@ -1,15 +1,14 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Layout from '../components/layout';
-import {PageTitle} from '../components/page-title/page-title';
-import { ArtworkTitle } from "../components/artwork-title/artwork-title";
-import { ArtworkDetail } from "../components/artwork-detail/artwork-detail";
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
+import { ArtworkTitle } from '../components/artwork-title/artwork-title'
+import { ArtworkDetail } from '../components/artwork-detail/artwork-detail'
 
-export default function Template({data}) {
-  const { markdownRemark } = data;
-  const { frontmatter } = markdownRemark;
+export default function Template({ data }) {
+  const { markdownRemark } = data
+  const { frontmatter } = markdownRemark
 
-  return (  
+  return (
     <Layout>
       <ArtworkTitle>{frontmatter.title}</ArtworkTitle>
       <ArtworkDetail>{frontmatter.year}</ArtworkDetail>
@@ -17,7 +16,7 @@ export default function Template({data}) {
       <ArtworkDetail>{frontmatter.media}</ArtworkDetail>
       <pre>{JSON.stringify(frontmatter)}</pre>
     </Layout>
-  );
+  )
 }
 
 export const pageQuery = graphql`
