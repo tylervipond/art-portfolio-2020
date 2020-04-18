@@ -2,12 +2,10 @@ backend:
   name: git-gateway
   branch: master
 media_library:
-  name: uploadcare
+  name: cloudinary
   config:
-    publicKey: 09634082642e628ffd99
-  settings:
-    autoFilename: true
-    defaultOperations: '/resize/2048x/'
+    cloud_name: 'dgfapv7ud'
+    api_key: 542466592693516
 collections:
   - name: 'sculptures'
     label: 'Sculptures'
