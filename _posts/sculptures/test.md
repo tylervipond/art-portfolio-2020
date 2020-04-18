@@ -4,7 +4,8 @@ title: test
 year: '2019'
 size: 10 x 10
 media: mixed
-image: /images/uploads/beach_debris_1.jpg.1500x0_q85ss0_crop-scale_upscale.jpg
+image: >-
+  https://res.cloudinary.com/dgfapv7ud/image/upload/v1587226052/Screen_Shot_2020-04-10_at_10.56.34_PM_pde27i.png
 order: 0
 ---
 
