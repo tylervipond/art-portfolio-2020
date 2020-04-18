@@ -22,6 +22,6 @@ collections:
           label: 'Image',
           name: 'image',
           widget: 'image',
-          media_library: { config: { multiple: true } },
+          config: { multiple: true },
         }
       - { label: 'Order', name: 'order', widget: 'number', default: 0 }

@@ -1,9 +1,10 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import { Image, Transformation, CloudinaryContext } from 'cloudinary-react';
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import { PageTitle } from '../components/page-title/page-title'
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import { PageTitle } from '../components/page-title/page-title';
 
 const IndexPage = ({
   data: {
@@ -15,13 +16,14 @@ const IndexPage = ({
     <PageTitle>Works</PageTitle>
     {edges.map(({ node }) => (
       <Link key={node.id} to={node.frontmatter.path}>
+        <img src={node.frontmatter.image} />
         {node.frontmatter.title}
       </Link>
     ))}
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query {
@@ -38,4 +40,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
