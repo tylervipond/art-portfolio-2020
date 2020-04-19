@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { PageTitle } from '../components/page-title/page-title';
+import { Thumbnail} from '../components/thumbnail/thumbnail';
 
 const IndexPage = ({
   data: {
@@ -15,7 +16,7 @@ const IndexPage = ({
     <PageTitle>Works</PageTitle>
     {edges.map(({ node }) => (
       <Link key={node.id} to={node.path}>
-        <img src={node.image} />
+        <Thumbnail imageUrl={node.image} altCopy={node.title} />
         {node.title}
       </Link>
     ))}
