@@ -8,27 +8,25 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
   const result = await graphql(`
     {
-      allMarkdownRemark {
+      allSculpture {
         edges {
           node {
-            frontmatter {
-              path
-            }
+            path
           }
         }
       }
     }
-  `)
+  `);
 
   if (result.errors) {
-    reporter.panicOnBuild('Error while running GraphQL query.')
-    return
+    reporter.panicOnBuild('Error while running GraphQL query.');
+    return;
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.allSculpture.edges.forEach(({ node }) => {
     createPage({
-      path: `${node.frontmatter.path}`,
+      path: `${node.path}`,
       component: require.resolve('./src/templates/sculpture-template.js'),
-    })
-  })
-}
+    });
+  });
+};

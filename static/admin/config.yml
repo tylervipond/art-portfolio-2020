@@ -6,42 +6,23 @@ media_library:
   config:
     cloud_name: 'dgfapv7ud'
     api_key: 542466592693516
-    allow_multiple: false
 collections:
-  - name: 'sculptures'
-    label: 'Sculptures'
-    folder: '_posts/sculptures'
+  - name: 'artworks'
+    label: 'Artworks'
+    folder: '_posts/artworks'
     create: true
     slug: '{{slug}}'
     fields:
+      - { label: 'Category', name: 'category', widget: 'select', options: ['sculpture', 'collage', 'digital']}
       - { label: 'Path', name: 'path', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Year', name: 'year', widget: 'string' }
       - { label: 'Size', name: 'size', widget: 'string' }
       - { label: 'Media', name: 'media', widget: 'string' }
       - {
-          label: 'Primary Image',
-          name: 'primary_image',
+          label: 'Image',
+          name: 'image',
           widget: 'image',
-        }
-      - {
-          label: 'Detail Image #1',
-          name: 'detail_image_1',
-          widget: 'image',
-        }
-      - {
-          label: 'Detail Image #2',
-          name: 'detail_image_2',
-          widget: 'image',
-        }
-      - {
-          label: 'Detail Image #3',
-          name: 'detail_image_3',
-          widget: 'image',
-        }
-      - {
-          label: 'Detail Image #4',
-          name: 'detail_image_4',
-          widget: 'image',
+          config: { multiple: true },
         }
       - { label: 'Order', name: 'order', widget: 'number', default: 0 }
