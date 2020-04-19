@@ -5,7 +5,7 @@ media_library:
   name: cloudinary
   config:
     cloud_name: 'dgfapv7ud'
-    api_key: 542466592693516,
+    api_key: 542466592693516
     multiple: true
 collections:
   - name: 'artworks'
