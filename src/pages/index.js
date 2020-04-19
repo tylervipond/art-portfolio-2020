@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import { Image, Transformation, CloudinaryContext } from 'cloudinary-react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -16,7 +15,7 @@ const IndexPage = ({
     <PageTitle>Works</PageTitle>
     {edges.map(({ node }) => (
       <Link key={node.id} to={node.frontmatter.path}>
-        <img src={node.frontmatter.image} />
+        <img src={node.frontmatter.primary_image} />
         {node.frontmatter.title}
       </Link>
     ))}
@@ -34,7 +33,7 @@ export const pageQuery = graphql`
           frontmatter {
             path
             title
-            image
+            primary_image
           }
         }
       }
