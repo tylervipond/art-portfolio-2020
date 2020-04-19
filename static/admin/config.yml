@@ -6,6 +6,7 @@ media_library:
   config:
     cloud_name: 'dgfapv7ud'
     api_key: 542466592693516
+    allow_multiple: false
 collections:
   - name: 'sculptures'
     label: 'Sculptures'
@@ -19,9 +20,28 @@ collections:
       - { label: 'Size', name: 'size', widget: 'string' }
       - { label: 'Media', name: 'media', widget: 'string' }
       - {
-          label: 'Image',
-          name: 'image',
+          label: 'Primary Image',
+          name: 'primary_image',
           widget: 'image',
-          media_library: { config: { multiple: true } },
+        }
+      - {
+          label: 'Detail Image #1',
+          name: 'detail_image_1',
+          widget: 'image',
+        }
+      - {
+          label: 'Detail Image #2',
+          name: 'detail_image_2',
+          widget: 'image',
+        }
+      - {
+          label: 'Detail Image #3',
+          name: 'detail_image_3',
+          widget: 'image',
+        }
+      - {
+          label: 'Detail Image #4',
+          name: 'detail_image_4',
+          widget: 'image',
         }
       - { label: 'Order', name: 'order', widget: 'number', default: 0 }
