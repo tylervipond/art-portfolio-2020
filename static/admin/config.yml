@@ -5,7 +5,8 @@ media_library:
   name: cloudinary
   config:
     cloud_name: 'dgfapv7ud'
-    api_key: 542466592693516
+    api_key: 542466592693516,
+    multiple: true
 collections:
   - name: 'artworks'
     label: 'Artworks'
@@ -23,6 +24,5 @@ collections:
           label: 'Image',
           name: 'image',
           widget: 'image',
-          config: { multiple: true },
         }
       - { label: 'Order', name: 'order', widget: 'number', default: 0 }
