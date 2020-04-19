@@ -7,16 +7,16 @@ import { PageTitle } from '../components/page-title/page-title';
 
 const IndexPage = ({
   data: {
-    allMarkdownRemark: { edges },
+    allSculpture: { edges },
   },
 }) => (
   <Layout>
     <SEO title="Home" />
     <PageTitle>Works</PageTitle>
     {edges.map(({ node }) => (
-      <Link key={node.id} to={node.frontmatter.path}>
-        <img src={node.frontmatter.primary_image} />
-        {node.frontmatter.title}
+      <Link key={node.id} to={node.path}>
+        <img src={node.image} />
+        {node.title}
       </Link>
     ))}
   </Layout>
@@ -26,15 +26,13 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark {
+    allSculpture {
       edges {
         node {
-          id
-          frontmatter {
-            path
-            title
-            primary_image
-          }
+          path
+          title
+          image
+          order
         }
       }
     }
