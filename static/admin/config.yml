@@ -3,11 +3,11 @@ backend:
   branch: master
 media_library:
   name: cloudinary
+  output_filename_only: true
   config:
     cloud_name: 'dgfapv7ud'
     api_key: 542466592693516
     multiple: true
-    output_filename_only: true
 collections:
   - name: 'artworks'
     extension: 'json'
