@@ -1,9 +1,13 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { PageTitle } from '../components/page-title/page-title';
+import { ThumbnailGrid } from '../components/thumbnail-grid/thumbnail-grid';
+import { css } from '@emotion/core';
+import { SPACE_MEDIUM } from '../styles/spaceing-scale';
+import { ThumbnailLink } from '../components/thumbnail-link/thumbnail-link';
 
 const IndexPage = ({
   data: {
@@ -12,13 +16,25 @@ const IndexPage = ({
 }) => (
   <Layout>
     <SEO title="Home" />
-    <PageTitle>Works</PageTitle>
-    {edges.map(({ node }) => (
-      <Link key={node.id} to={node.path}>
-        <img src={node.image} />
-        {node.title}
-      </Link>
-    ))}
+    <PageTitle
+      css={css`
+        margin-bottom: ${SPACE_MEDIUM};
+      `}
+    >
+      Sculpture
+    </PageTitle>
+    <ThumbnailGrid>
+      {edges.map(({ node }) => (
+        <li>
+          <ThumbnailLink
+            key={node.id}
+            url={node.path}
+            title={node.title}
+            imageFileName={node.image[0]}
+          ></ThumbnailLink>
+        </li>
+      ))}
+    </ThumbnailGrid>
   </Layout>
 );
 

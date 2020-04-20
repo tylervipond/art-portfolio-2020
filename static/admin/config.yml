@@ -7,10 +7,12 @@ media_library:
     cloud_name: 'dgfapv7ud'
     api_key: 542466592693516
     multiple: true
+    output_filename_only: true
 collections:
   - name: 'artworks'
+    extension: 'json'
     label: 'Artworks'
-    folder: '_posts/artworks'
+    folder: '_posts'
     create: true
     slug: '{{slug}}'
     fields:

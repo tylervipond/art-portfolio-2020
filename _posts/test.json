@@ -5,6 +5,6 @@
     "year": "2020",
     "title": "cool",
     "path": "/cool",
-    "image": "",
+    "image": ["Screen_Shot_2020-04-10_at_10.56.34_PM_pde27i.png", "sample.jpg"],
     "order": 0
 }
