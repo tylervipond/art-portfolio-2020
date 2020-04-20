@@ -1,5 +1,5 @@
 ---
-category: collage
+category: sculpture
 path: /self_portrait_as_six_pack_of_beer
 title: Self Portrait as Six Pack of Beer
 year: '2017'
