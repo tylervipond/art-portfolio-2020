@@ -5,12 +5,14 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useStaticQuery, graphql } from 'gatsby';
+import { css } from '@emotion/core';
+import { SPACE_MEDIUM } from '../styles/spaceing-scale';
 
-import Header from "./header"
-import "./layout.css"
+import Header from './header';
+import './layout.css';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -21,7 +23,7 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
@@ -34,17 +36,23 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <main>{children}</main>
+        <main
+          css={css`
+            margin-bottom: ${SPACE_MEDIUM};
+          `}
+        >
+          {children}
+        </main>
         <footer>
           <p>Tyler Vipond, 2020</p>
         </footer>
       </div>
     </>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
