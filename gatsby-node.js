@@ -22,11 +22,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     reporter.panicOnBuild('Error while running GraphQL query.');
     return;
   }
-
-  result.data.allSculpture.edges.forEach(({ node }) => {
-    createPage({
-      path: `${node.path}`,
-      component: require.resolve('./src/templates/sculpture-template.js'),
+  Object.keys(result.data).forEach(k => {
+    result.data[k].edges.forEach(({ node }) => {
+      createPage({
+        path: `${node.path}`,
+        component: require.resolve('./src/templates/art-template.js'),
+      });
     });
-  });
+  })
 };
