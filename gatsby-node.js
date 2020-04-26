@@ -4,10 +4,22 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
+const templateMap = {
+  allSculpture: './src/templates/sculpture-template.js',
+  allCollage: './src/templates/collage-template.js',
+};
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
   const result = await graphql(`
     {
+      allCollage {
+        edges {
+          node {
+            path
+          }
+        }
+      },
       allSculpture {
         edges {
           node {
@@ -26,7 +38,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     result.data[k].edges.forEach(({ node }) => {
       createPage({
         path: `${node.path}`,
-        component: require.resolve('./src/templates/art-template.js'),
+        component: require.resolve(templateMap[k]),
       });
     });
   })
