@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link as GatsbyLink } from 'gatsby';
 import styled from '@emotion/styled';
-import { Thumbnail } from '../thumbnail/thumbnail';
+import { Thumbnail } from './thumbnail';
 
 const Link = styled(GatsbyLink)`
   display: block;
@@ -9,6 +9,8 @@ const Link = styled(GatsbyLink)`
   text-decoration: none;
   position: relative;
   text-decoration: none;
+  transition: color 0.5s ease;
+  color: black;
   &::after,
   &::after {
     content: '';
@@ -18,7 +20,14 @@ const Link = styled(GatsbyLink)`
     bottom: -3px;
     top: -3px;
     border: 1px solid transparent;
-    transition: border-color 0.5s ease;
+    transition: border-color 0.3s ease;
+  }
+  &:visited {
+    color: inherit;
+  }
+  &:hover,
+  &:focus {
+    color: darkred;
   }
   &:hover::after,
   &:focus::after {

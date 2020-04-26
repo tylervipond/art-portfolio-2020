@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { PageTitle } from "../components/page-title/page-title"
+import { PageTitle } from "../components/page-title"
 
 const bioPage = () => (
   <Layout>

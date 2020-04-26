@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Art by Tyler Vipond`,
+    title: `Tyler Vipond`,
     description: `A portfolio of artworks by Toronto based artist Tyler Vipond.`,
     author: `Tyler Vipond`,
   },
