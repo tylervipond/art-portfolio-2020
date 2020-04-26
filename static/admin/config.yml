@@ -50,7 +50,7 @@ collections:
               'awards',
             ],
         }
-      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Venue', name: 'venue', widget: 'string' }
       - { label: 'Year', name: 'year', widget: 'string' }
       - { label: 'Location', name: 'location', widget: 'string' }
