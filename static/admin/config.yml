@@ -16,15 +16,42 @@ collections:
     create: true
     slug: '{{slug}}'
     fields:
-      - { label: 'Category', name: 'category', widget: 'select', options: ['sculpture', 'collage', 'digital']}
+      - {
+          label: 'Category',
+          name: 'category',
+          widget: 'select',
+          options: ['sculpture', 'collage', 'digital'],
+        }
       - { label: 'Path', name: 'path', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Year', name: 'year', widget: 'string' }
       - { label: 'Size', name: 'size', widget: 'string' }
       - { label: 'Media', name: 'media', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Order', name: 'order', widget: 'number', default: 0 }
+  - name: 'cv'
+    extension: 'json'
+    label: 'CV'
+    folder: '_cv'
+    create: true
+    slug: '{{slug}}'
+    fields:
       - {
-          label: 'Image',
-          name: 'image',
-          widget: 'image',
+          label: 'Category',
+          name: 'category',
+          widget: 'select',
+          options:
+            [
+              'group show',
+              'solo show',
+              'two person show',
+              'publication',
+              'education',
+              'awards',
+            ],
         }
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Venue', name: 'venue', widget: 'string' }
+      - { label: 'Year', name: 'year', widget: 'string' }
+      - { label: 'Location', name: 'location', widget: 'string' }
       - { label: 'Order', name: 'order', widget: 'number', default: 0 }
