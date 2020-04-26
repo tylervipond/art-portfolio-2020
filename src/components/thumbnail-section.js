@@ -17,9 +17,8 @@ export const ThumbnailSection = ({ artworks, title }) => (
     </PageTitle>
     <ThumbnailGrid>
       {artworks.map(artwork => (
-        <li>
+        <li key={artwork.title}>
           <ThumbnailLink
-            key={artwork.id}
             url={artwork.path}
             title={artwork.title}
             imageFileName={artwork.image[0]}
