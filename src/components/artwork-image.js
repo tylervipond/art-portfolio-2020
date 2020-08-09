@@ -23,28 +23,28 @@ export const ArtworkImage = ({ fileName, altCopy }) => (
         ${format_cloudinary_url(fileName, [
           `w_${SIZE_ARTWORK_SCREEN_SMALL}`,
           `h_${SIZE_ARTWORK_SCREEN_SMALL}`,
-          'e_sharpen:150',
+          'e_sharpen:100',
           'c_fit',
           'f_auto',
         ])} ${SIZE_ARTWORK_SCREEN_SMALL}w,
         ${format_cloudinary_url(fileName, [
           `w_${SIZE_ARTWORK_SCREEN_MEDIUM}`,
           `h_${SIZE_ARTWORK_SCREEN_MEDIUM}`,
-          'e_sharpen:150',
+          'e_sharpen:100',
           'c_fit',
           'f_auto',
         ])} ${SIZE_ARTWORK_SCREEN_MEDIUM}w,
         ${format_cloudinary_url(fileName, [
           `w_${SIZE_ARTWORK_SCREEN_LARGE}`,
           `h_${SIZE_ARTWORK_SCREEN_LARGE}`,
-          'e_sharpen:150',
+          'e_sharpen:100',
           'c_fit',
           'f_auto',
         ])} ${SIZE_ARTWORK_SCREEN_LARGE}w,
         ${format_cloudinary_url(fileName, [
           `w_${SIZE_ARTWORK_SCREEN_EXTRA_LARGE}`,
           `h_${SIZE_ARTWORK_SCREEN_EXTRA_LARGE}`,
-          'e_sharpen:150',
+          'e_sharpen:100',
           'c_fit',
           'f_auto',
         ])} ${SIZE_ARTWORK_SCREEN_EXTRA_LARGE}w
@@ -64,7 +64,7 @@ export const ArtworkImage = ({ fileName, altCopy }) => (
     src={format_cloudinary_url(fileName, [
       `w_${SIZE_ARTWORK_SCREEN_EXTRA_LARGE}`,
       `h_${SIZE_ARTWORK_SCREEN_EXTRA_LARGE}`,
-      'e_sharpen:150',
+      'e_sharpen:100',
       'c_fit',
       'f_auto',
     ])}
