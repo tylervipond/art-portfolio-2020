@@ -22,24 +22,28 @@ export const Thumbnail = ({ fileName, altCopy }) => (
         ${format_cloudinary_url(fileName, [
           `w_${SIZE_THUMBNAIL_SCREEN_SMALL}`,
           `h_${SIZE_THUMBNAIL_SCREEN_SMALL}`,
+          'e_sharpen:150',
           'c_fill',
           'f_auto',
         ])} ${SIZE_THUMBNAIL_SCREEN_SMALL}w,
         ${format_cloudinary_url(fileName, [
           `w_${SIZE_THUMBNAIL_SCREEN_MEDIUM}`,
           `h_${SIZE_THUMBNAIL_SCREEN_MEDIUM}`,
+          'e_sharpen:150',
           'c_fill',
           'f_auto',
         ])} ${SIZE_THUMBNAIL_SCREEN_MEDIUM}w,
         ${format_cloudinary_url(fileName, [
           `w_${SIZE_THUMBNAIL_SCREEN_LARGE}`,
           `h_${SIZE_THUMBNAIL_SCREEN_LARGE}`,
+          'e_sharpen:150',
           'c_fill',
           'f_auto',
         ])} ${SIZE_THUMBNAIL_SCREEN_LARGE}w,
         ${format_cloudinary_url(fileName, [
           `w_${SIZE_THUMBNAIL_SCREEN_EXTRA_LARGE}`,
           `h_${SIZE_THUMBNAIL_SCREEN_EXTRA_LARGE}`,
+          'e_sharpen:150',
           'c_fill',
           'f_auto',
         ])} ${SIZE_THUMBNAIL_SCREEN_EXTRA_LARGE}w
@@ -59,6 +63,7 @@ export const Thumbnail = ({ fileName, altCopy }) => (
     src={format_cloudinary_url(fileName, [
       `w_${SIZE_THUMBNAIL_SCREEN_EXTRA_LARGE}`,
       `h_${SIZE_THUMBNAIL_SCREEN_EXTRA_LARGE}`,
+      'e_sharpen:150',
       'c_fill',
       'f_auto',
     ])}
