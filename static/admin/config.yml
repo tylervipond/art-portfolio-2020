@@ -42,9 +42,9 @@ collections:
           widget: 'select',
           options:
             [
-              'group show',
-              'solo show',
-              'two person show',
+              'group_show',
+              'solo_show',
+              'two_person_show',
               'publication',
               'education',
               'awards',

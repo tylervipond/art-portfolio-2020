@@ -18,12 +18,8 @@ import { Link } from './link';
 import { AppTitle } from './app-title';
 
 const HeaderWrapper = styled.header`
-  margin: 0 auto;
   max-width: ${asRem(SIZE_CONTENT_LARGE)};
-  padding: ${asRem(SPACE_LARGE)} ${asRem(SPACE_MEDIUM)};
-  ${AppTitle} {
-    margin-bottom: ${asRem(SPACE_SMALL)};
-  }
+  margin: ${props => props.margin || 0};
   ${Link} {
     margin-right: ${asRem(SPACE_MEDIUM)};
   }
@@ -39,8 +35,8 @@ const HeaderWrapper = styled.header`
   }
 `;
 
-const Header = ({ siteTitle }) => (
-  <HeaderWrapper>
+const Header = ({ siteTitle, margin }) => (
+  <HeaderWrapper margin={margin}>
     <AppTitle>
       <Link to="/">{siteTitle}</Link>
     </AppTitle>

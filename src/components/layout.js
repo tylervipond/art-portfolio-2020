@@ -19,6 +19,8 @@ import {
   SCREEN_SIZE_EXTRA_LARGE,
   asRem,
   asPx,
+  SPACE_SMALL,
+  SPACE_EXTRA_LARGE,
 } from '../styles';
 import Header from './header';
 import './layout.css';
@@ -26,8 +28,9 @@ import './layout.css';
 const PageWrapper = styled.div`
   margin: 0 auto;
   max-width: ${asRem(SIZE_CONTENT_LARGE)};
-  padding: 0px ${asRem(SPACE_MEDIUM)} ${asRem(SPACE_LARGE)};
-  padding-top: 0;
+  padding: 0px ${asRem(SPACE_MEDIUM)} ${asRem(SPACE_EXTRA_LARGE)};
+  min-height: 100vh;
+  position:relative;
   @media (min-width: ${asPx(SCREEN_SIZE_EXTRA_LARGE)}) {
     max-width: ${asRem(SIZE_CONTENT_EXTRA_LARGE)};
   }
@@ -46,8 +49,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
       <PageWrapper>
+        <Header margin={`${asRem(SPACE_SMALL)} 0 ${asRem(SPACE_MEDIUM)}`} siteTitle={data.site.siteMetadata.title} />
         <main
           css={css`
             margin-bottom: ${asRem(SPACE_MEDIUM)};
@@ -55,7 +58,7 @@ const Layout = ({ children }) => {
         >
           {children}
         </main>
-        <footer>
+        <footer css={css`position: absolute; left: ${asRem(SPACE_MEDIUM)}; right: ${asRem(SPACE_MEDIUM)}; bottom: 0`}>
           <p>Tyler Vipond, 2020</p>
         </footer>
       </PageWrapper>
