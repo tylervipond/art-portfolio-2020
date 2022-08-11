@@ -7,6 +7,13 @@ import { ArtworkList } from "../components/ArtworkList";
 import aGeneralLackOfUnderstanding from "../data/aGeneralLackOfUnderstanding.json";
 import { ArtworkListItem } from "../components/ArtworkListItem.component";
 import { TextWithHeader } from "../components/TextWithHeader.component";
+import styled from "styled-components";
+
+const ArtworkListItemWrapper = styled("li")`
+  max-width: 240px;
+  min-width: 0;
+`;
+ArtworkListItemWrapper.displayName = "ArtworkListItemWrapper";
 
 const AGeneralLackOfUnderstandingPage = () => {
   return (
@@ -17,12 +24,13 @@ const AGeneralLackOfUnderstandingPage = () => {
           <TextWithHeader
             text={aGeneralLackOfUnderstanding.description}
             header={aGeneralLackOfUnderstanding.title}
+            detail={aGeneralLackOfUnderstanding.detail}
           />
           <ArtworkList>
             {aGeneralLackOfUnderstanding.artworks.map((artwork) => (
-              <li key={artwork.title}>
+              <ArtworkListItemWrapper key={artwork.title}>
                 <ArtworkListItem {...artwork} />
-              </li>
+              </ArtworkListItemWrapper>
             ))}
           </ArtworkList>
         </>

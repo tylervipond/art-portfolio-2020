@@ -9,6 +9,7 @@ const PageLayoutLayout = styled("div")`
   gap: ${({ theme }) => theme.spacing[6] / 16}rem;
   padding: ${({ theme }) => theme.spacing[4] / 16}rem;
   justify-content: start;
+  justify-items: start;
 `;
 PageLayoutLayout.displayName = "PageLayoutLayout";
 

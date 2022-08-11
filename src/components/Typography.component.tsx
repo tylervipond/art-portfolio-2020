@@ -5,7 +5,8 @@ export type TypographyVariant =
   | "sub-header"
   | "fine-print"
   | "body"
-  | "interaction";
+  | "interaction"
+  | "detail";
 
 export interface TypographyProps {
   variant: TypographyVariant;
@@ -25,6 +26,7 @@ const fontSizes: Record<TypographyVariant, number> = {
   body: 1,
   "fine-print": 0,
   interaction: 2,
+  detail: 0,
 };
 
 const getFontSizeFromProps = ({
@@ -42,6 +44,7 @@ const letterSpacing: Record<
   body: "body",
   "fine-print": "body",
   interaction: "display",
+  detail: "body",
 };
 
 const getLetterSpacingFromProps = ({
@@ -55,6 +58,7 @@ const fontWeight: Record<TypographyVariant, number> = {
   body: 300,
   "fine-print": 500,
   interaction: 400,
+  detail: 300,
 };
 
 const getFontWeightFromProps = ({ variant }: StyledProps<TypographyProps>) =>
@@ -71,5 +75,6 @@ export const Typography = styled("p")<TypographyProps>`
   letter-spacing: ${getLetterSpacingFromProps};
   font-weight: ${getFontWeightFromProps};
   line-height: ${getLineHeightFromProps};
+  font-style: ${({ variant }) => (variant === "detail" ? "italic" : "normal")};
 `;
 Typography.displayName = "Typography";

@@ -10,5 +10,6 @@ export const Thumbnail = styled("img")<ThumbnailProps>`
   margin: 0;
   width: ${({ size }) => (size === "large" ? "480px" : "240px")};
   max-width: 100%;
+  aspect-ratio: 3 / 2;
 `;
 Thumbnail.displayName = "Thumbnail";

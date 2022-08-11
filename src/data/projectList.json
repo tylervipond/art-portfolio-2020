@@ -2,13 +2,24 @@
   {
     "title": "A General Lack of Understanding",
     "description": "A collage series responding to the uncertainty and anxiety of our ever changing, ever disappearing reality.",
-    "imageSrc": "aGeneralLackOfUnderstandingProjectImage.jpg",
+    "detail": "Ongoing from 2017",
+    "imageSrc": "/aGeneralLackOfUnderstandingProjectImage.jpg",
     "actionLabel": "View A General Lack of Understanding",
     "url": "/a-general-lack-of-understanding",
     "target": "internal"
   },
   {
+    "title": "TriplePlay",
+    "description": "I worked on the design team at TriplePlay, focusing on UI for the event app, host app, and multiplayer games.",
+    "detail": "2021 - 2022",
+    "imageSrc": "/tripleplayProjectImage.jpg",
+    "actionLabel": "View TriplePlay",
+    "url": "https://try.tripleplay.ai/",
+    "target": "external"
+  },
+  {
     "title": "Apprentice",
+    "detail": "Ongoing from 2020",
     "description": "A roguelike adventure game where you are thrust into a labyrinthine citadel to seek out that which your master desires. Certain death awaits.",
     "imageSrc": "/apprenticeProjectImage.png",
     "actionLabel": "View Apprentice",
@@ -17,7 +28,8 @@
   },
   {
     "title": "Theme and Variation",
-    "description": "A series of gifs procedurally generated from other, related gifs in a never ending, never repeating manner. If you have sensitivity to flashing light, this should be avoided",
+    "description": "A series of gifs procedurally generated from other, related gifs in a never ending, never repeating manner. If you have sensitivity to flashing light, this should be avoided.",
+    "detail": "Ongoing from 2020",
     "imageSrc": "/themeAndVariationProjectImage2.jpg",
     "actionLabel": "View Theme and Variation",
     "url": "https://www.theme-and-variation.com",

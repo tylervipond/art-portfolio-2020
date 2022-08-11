@@ -8,6 +8,11 @@ const ProjectFeatureLayout = styled("div")`
   grid-auto-flow: column;
   gap: ${({ theme }) => theme.spacing[4] / 16}rem;
   justify-content: start;
+
+  @media screen and (max-width: 1024px) {
+    grid-auto-flow: row;
+    gap: ${({ theme }) => theme.spacing[1] / 16}rem;
+  }
 `;
 ProjectFeatureLayout.displayName = "ProjectFeatureLayout";
 
@@ -16,6 +21,7 @@ export interface ProjectFeatureProps {
   description: string;
   action: React.ReactComponentElement<any>;
   imageSrc: string;
+  detail: string;
 }
 
 export const ProjectFeature: React.FC<ProjectFeatureProps> = ({
@@ -23,11 +29,13 @@ export const ProjectFeature: React.FC<ProjectFeatureProps> = ({
   description,
   action,
   imageSrc,
+  detail,
 }) => (
   <ProjectFeatureLayout>
     <Thumbnail size="large" src={imageSrc} />
     <ProjectFeatureInfo
       title={title}
+      detail={detail}
       description={description}
       action={action}
     />

@@ -25,15 +25,16 @@ const ButtonLayout = styled("button")`
   transition: border 0.5s, filter 0.5s, background 0.5s;
   position: relative;
 
-  &:after {
+  &::after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     content: 0;
-    border-radius: ${({ theme }) => theme.borderRadii[1] / 16}rem;
     opacity: 0;
+    z-index: -1;
     background: linear-gradient(
       99.71deg,
       #00d6e3 0%,
@@ -47,19 +48,17 @@ const ButtonLayout = styled("button")`
     filter: drop-shadow(0px 0px 5px #00d6e3);
   }
 
-  &:hover {
+  &:hover:not(:disabled) {
     cursor: pointer;
-    background: linear-gradient(
-      99.71deg,
-      #00d6e3 0%,
-      rgba(0, 214, 227, 0) 57.3%
-    );
     border: 2px solid #00d6e3;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
     &::after {
-      opacity: 1;
+      opacity: 0.5;
     }
+  }
+  &:disabled {
+    opacity: 0.5;
   }
 `;
 ButtonLayout.displayName = "ButtonLayout";

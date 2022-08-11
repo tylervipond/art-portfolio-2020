@@ -43,7 +43,7 @@ ArtworkListItemLayout.displayName = "ArtworkListItemLayout";
 const ArtworkListItemInfoLayout = styled("div")`
   display: grid;
   grid-auto-flow: row;
-  gap: ${({ theme }) => theme.spacing[1] / 16}rem;
+  gap: ${({ theme }) => theme.spacing[0] / 16}rem;
   padding: 0 ${({ theme }) => theme.spacing[0] / 16}rem
     ${({ theme }) => theme.spacing[0] / 16}rem;
 `;
@@ -63,7 +63,7 @@ const ArtworkListItemInfo: React.FC<ArtworkListItemInfoProps> = ({
 }) => (
   <ArtworkListItemInfoLayout>
     <Typography variant="body">{title}</Typography>
-    <Typography variant="fine-print">
+    <Typography variant="detail">
       {media}, {size}, {year}
     </Typography>
   </ArtworkListItemInfoLayout>
