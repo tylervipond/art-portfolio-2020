@@ -1,0 +1,26 @@
+[
+  {
+    "title": "A General Lack of Understanding",
+    "description": "A collage series responding to the uncertainty and anxiety of our ever changing, ever disappearing reality.",
+    "imageSrc": "aGeneralLackOfUnderstandingProjectImage.jpg",
+    "actionLabel": "View A General Lack of Understanding",
+    "url": "/a-general-lack-of-understanding",
+    "target": "internal"
+  },
+  {
+    "title": "Apprentice",
+    "description": "A roguelike adventure game where you are thrust into a labyrinthine citadel to seek out that which your master desires. Certain death awaits.",
+    "imageSrc": "/apprenticeProjectImage.png",
+    "actionLabel": "View Apprentice",
+    "url": "https://www.apprentice-game.com/",
+    "target": "external"
+  },
+  {
+    "title": "Theme and Variation",
+    "description": "A series of gifs procedurally generated from other, related gifs in a never ending, never repeating manner. If you have sensitivity to flashing light, this should be avoided",
+    "imageSrc": "/themeAndVariationProjectImage2.jpg",
+    "actionLabel": "View Theme and Variation",
+    "url": "https://www.theme-and-variation.com",
+    "target": "external"
+  }
+]
