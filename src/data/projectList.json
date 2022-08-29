@@ -9,15 +9,6 @@
     "target": "internal"
   },
   {
-    "title": "TriplePlay",
-    "description": "I worked on the design team at TriplePlay, focusing on UI for the event app, host app, and multiplayer games.",
-    "detail": "2021 - 2022",
-    "imageSrc": "/tripleplayProjectImage.jpg",
-    "actionLabel": "View TriplePlay",
-    "url": "https://try.tripleplay.ai/",
-    "target": "external"
-  },
-  {
     "title": "Apprentice",
     "detail": "Ongoing from 2020",
     "description": "A roguelike adventure game where you are thrust into a labyrinthine citadel to seek out that which your master desires. Certain death awaits.",
